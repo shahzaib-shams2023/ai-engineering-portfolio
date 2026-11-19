@@ -3,47 +3,94 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shahzaib | AI & Full-Stack Engineering Portfolio</title>
+  <title>Shahzaib Shams | Production AI Systems & Engineering Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script>
     tailwind.config = {
       darkMode: 'class',
       theme: {
         extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
           colors: {
             brand: {
-              50: '#f0fdf4',
+              50: '#ecfdf5',
+              400: '#34d399',
               500: '#10b981',
               600: '#059669',
-              900: '#064e3b'
+              900: '#064e3b',
+              950: '#022c22'
             }
           }
         }
       }
     }
   </script>
+  <style>
+    body {
+      background-color: #030712;
+      background-image: 
+        radial-gradient(ellipse 80% 50% at 50% -20%, rgba(16, 185, 129, 0.15), transparent 70%),
+        radial-gradient(circle at 10% 20%, rgba(59, 130, 246, 0.08), transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(139, 92, 246, 0.08), transparent 40%);
+      background-attachment: fixed;
+    }
+    .glass-panel {
+      background: rgba(15, 23, 42, 0.65);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+    }
+    .glass-card {
+      background: linear-gradient(135deg, rgba(30, 41, 59, 0.5) 0%, rgba(15, 23, 42, 0.7) 100%);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .glass-card:hover {
+      border-color: rgba(16, 185, 129, 0.4);
+      transform: translateY(-4px);
+      box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.5), 0 0 25px -5px rgba(16, 185, 129, 0.2);
+    }
+    .glow-pill {
+      box-shadow: 0 0 15px -3px rgba(16, 185, 129, 0.3);
+    }
+  </style>
 </head>
-<body class="bg-slate-950 text-slate-100 min-h-screen font-sans selection:bg-emerald-500 selection:text-white">
-  <!-- Sticky Nav -->
-  <header class="border-b border-slate-800/80 bg-slate-950/80 backdrop-blur sticky top-0 z-50 px-6 py-4">
+<body class="text-slate-100 min-h-screen font-sans selection:bg-emerald-500 selection:text-white antialiased">
+  
+  <!-- Navigation Header -->
+  <header class="border-b border-slate-800/80 bg-slate-950/80 backdrop-blur-xl sticky top-0 z-50 px-6 py-4">
     <div class="max-w-7xl mx-auto flex items-center justify-between">
-      <div class="flex items-center space-x-3">
-        <div class="h-9 w-9 rounded-xl bg-gradient-to-tr from-emerald-600 to-teal-400 flex items-center justify-center shadow-lg shadow-emerald-500/20 font-bold text-slate-950">
+      <div class="flex items-center space-x-3.5">
+        <div class="h-10 w-10 rounded-xl bg-gradient-to-tr from-emerald-600 via-teal-500 to-cyan-400 flex items-center justify-center shadow-lg shadow-emerald-500/25 font-extrabold text-slate-950 text-base">
           S
         </div>
         <div>
-          <h1 class="text-sm font-bold tracking-tight text-white flex items-center">
-            Shahzaib
-            <span class="ml-2 text-[10px] font-mono uppercase bg-emerald-950 text-emerald-400 px-2 py-0.5 rounded border border-emerald-800">AI Engineer</span>
-          </h1>
-          <p class="text-xs text-slate-400">Production AI Systems, Multi-Agent Architecture & Full-Stack Engineering</p>
+          <div class="flex items-center space-x-2">
+            <h1 class="text-base font-bold tracking-tight text-white">Shahzaib Shams</h1>
+            <span class="text-[10px] font-mono uppercase bg-emerald-950/80 text-emerald-400 px-2 py-0.5 rounded-full border border-emerald-800 font-semibold tracking-wide">
+              Staff AI & Full-Stack Architect
+            </span>
+          </div>
+          <p class="text-xs text-slate-400">8 Decoupled Production Systems • Multi-Agent DAGs • Cybersecurity • Data Engineering</p>
         </div>
       </div>
-      <div class="flex items-center space-x-4">
-        <a href="https://github.com/shahzaib-shams2023" target="_blank" class="text-xs bg-slate-900 hover:bg-slate-800 text-slate-200 px-3.5 py-1.5 rounded-lg border border-slate-700/80 transition flex items-center space-x-2">
+      <div class="flex items-center space-x-3">
+        <div class="hidden sm:flex items-center space-x-2 text-xs font-mono px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-300">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span>All 8 Endpoints Live</span>
+        </div>
+        <a href="https://github.com/shahzaib-shams2023" target="_blank" class="text-xs bg-slate-900 hover:bg-slate-800 text-slate-200 px-3.5 py-1.5 rounded-lg border border-slate-700/80 transition flex items-center space-x-2 hover:border-emerald-500/50">
           <i class="fa-brands fa-github text-sm"></i>
-          <span>GitHub Profile</span>
+          <span>GitHub</span>
         </a>
       </div>
     </div>
@@ -51,419 +98,775 @@
 
   <!-- Hero Section -->
   <section class="max-w-7xl mx-auto px-6 pt-16 pb-12 text-center space-y-6">
-    <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full text-xs font-medium bg-emerald-950/70 text-emerald-400 border border-emerald-800">
+    <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full text-xs font-medium bg-emerald-950/60 text-emerald-400 border border-emerald-800/80 shadow-sm">
       <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-      <span>8 Independent Live Applications • 77/77 Unit Tests Passing • Zero-Setup Browser Demos</span>
+      <span class="font-mono text-[11px] font-semibold tracking-wide">8 PRODUCTION REPOSITORIES • 77/77 UNIT TESTS PASSING • ZERO-SETUP WEB APPS</span>
     </div>
     
-    <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight text-white max-w-4xl mx-auto leading-tight">
-      Engineering Production AI Systems for <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-cyan-400">Real-World Scale</span>
+    <h2 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-white max-w-4xl mx-auto leading-tight">
+      Production AI Systems Engineered for <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-cyan-400">Real-World Scale</span>
     </h2>
 
-    <p class="text-slate-400 text-base max-w-2xl mx-auto leading-relaxed">
-      A curated portfolio of 8 independently architected AI products covering Autonomous Agents, Text-to-SQL Analytics, Cybersecurity SIEM, Document Processing, and Data Engineering.
+    <p class="text-slate-400 text-base md:text-lg max-w-3xl mx-auto leading-relaxed">
+      A curated collection of enterprise artificial intelligence applications. Each project is independently publishable with typed Pydantic models, FastAPI backends, automated test suites, CI/CD pipelines, and active live web apps.
     </p>
 
-    <!-- Metrics Row -->
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto pt-6 text-left">
-      <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800">
-        <span class="text-xs text-slate-500 block">Total Projects</span>
-        <span class="text-2xl font-bold text-white font-mono">8 Repos</span>
+    <!-- Key Metrics Ribbon -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto pt-6 text-left">
+      <div class="glass-panel p-4 rounded-xl">
+        <span class="text-xs font-mono uppercase text-slate-500 block font-medium">Standalone Repositories</span>
+        <span class="text-2xl font-bold text-white font-mono mt-1 block">8 Projects</span>
+        <span class="text-[11px] text-slate-400 mt-1 block">Independently publishable</span>
       </div>
-      <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800">
-        <span class="text-xs text-slate-500 block">Automated Tests</span>
-        <span class="text-2xl font-bold text-emerald-400 font-mono">77 Passed (100%)</span>
+      <div class="glass-panel p-4 rounded-xl">
+        <span class="text-xs font-mono uppercase text-slate-500 block font-medium">Automated Tests</span>
+        <span class="text-2xl font-bold text-emerald-400 font-mono mt-1 block">77 Passed (100%)</span>
+        <span class="text-[11px] text-slate-400 mt-1 block">Pytest unit & API coverage</span>
       </div>
-      <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800">
-        <span class="text-xs text-slate-500 block">Tech Stack</span>
-        <span class="text-2xl font-bold text-teal-400 font-mono">FastAPI / React</span>
+      <div class="glass-panel p-4 rounded-xl">
+        <span class="text-xs font-mono uppercase text-slate-500 block font-medium">Core Tech Stack</span>
+        <span class="text-2xl font-bold text-teal-400 font-mono mt-1 block">FastAPI / Python</span>
+        <span class="text-[11px] text-slate-400 mt-1 block">SQLAlchemy, AsyncIO, Docker</span>
       </div>
-      <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800">
-        <span class="text-xs text-slate-500 block">Safety Guardrails</span>
-        <span class="text-2xl font-bold text-cyan-400 font-mono">AST & Zero-Trust</span>
+      <div class="glass-panel p-4 rounded-xl">
+        <span class="text-xs font-mono uppercase text-slate-500 block font-medium">Safety Architecture</span>
+        <span class="text-2xl font-bold text-cyan-400 font-mono mt-1 block">AST & Zero-Trust</span>
+        <span class="text-[11px] text-slate-400 mt-1 block">Mutation guards, RFC forensics</span>
       </div>
     </div>
   </section>
 
-  <!-- Filter Buttons -->
-  <section class="max-w-7xl mx-auto px-6 pb-6">
-    <div class="flex flex-wrap items-center justify-center gap-2">
-      <button onclick="filterCategory('all')" class="cat-btn text-xs px-3.5 py-1.5 rounded-lg bg-emerald-600 text-white font-medium transition" data-cat="all">All Projects (8)</button>
-      <button onclick="filterCategory('agents')" class="cat-btn text-xs px-3.5 py-1.5 rounded-lg bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800 transition" data-cat="agents">AI Agents</button>
-      <button onclick="filterCategory('data')" class="cat-btn text-xs px-3.5 py-1.5 rounded-lg bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800 transition" data-cat="data">Data Engineering</button>
-      <button onclick="filterCategory('cyber')" class="cat-btn text-xs px-3.5 py-1.5 rounded-lg bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800 transition" data-cat="cyber">Cybersecurity</button>
-      <button onclick="filterCategory('automation')" class="cat-btn text-xs px-3.5 py-1.5 rounded-lg bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800 transition" data-cat="automation">AI Automation</button>
-      <button onclick="filterCategory('fullstack')" class="cat-btn text-xs px-3.5 py-1.5 rounded-lg bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800 transition" data-cat="fullstack">Full-Stack Development</button>
+  <!-- Category Filter Bar -->
+  <section class="max-w-7xl mx-auto px-6 pb-4">
+    <div class="glass-panel p-2 rounded-2xl max-w-3xl mx-auto flex flex-wrap items-center justify-center gap-1.5">
+      <button onclick="filterCategory('all')" class="cat-btn text-xs px-3.5 py-1.5 rounded-xl bg-emerald-600 text-white font-medium transition shadow-sm" data-cat="all">
+        <i class="fa-solid fa-layer-group mr-1.5 text-[10px]"></i>All Projects (8)
+      </button>
+      <button onclick="filterCategory('agents')" class="cat-btn text-xs px-3.5 py-1.5 rounded-xl text-slate-400 hover:text-white hover:bg-slate-800 transition font-medium" data-cat="agents">
+        <i class="fa-solid fa-brain mr-1.5 text-indigo-400 text-[10px]"></i>AI Agents
+      </button>
+      <button onclick="filterCategory('data')" class="cat-btn text-xs px-3.5 py-1.5 rounded-xl text-slate-400 hover:text-white hover:bg-slate-800 transition font-medium" data-cat="data">
+        <i class="fa-solid fa-database mr-1.5 text-emerald-400 text-[10px]"></i>Data Engineering
+      </button>
+      <button onclick="filterCategory('cyber')" class="cat-btn text-xs px-3.5 py-1.5 rounded-xl text-slate-400 hover:text-white hover:bg-slate-800 transition font-medium" data-cat="cyber">
+        <i class="fa-solid fa-shield-virus mr-1.5 text-rose-400 text-[10px]"></i>Cybersecurity
+      </button>
+      <button onclick="filterCategory('automation')" class="cat-btn text-xs px-3.5 py-1.5 rounded-xl text-slate-400 hover:text-white hover:bg-slate-800 transition font-medium" data-cat="automation">
+        <i class="fa-solid fa-file-invoice mr-1.5 text-blue-400 text-[10px]"></i>AI Automation
+      </button>
+      <button onclick="filterCategory('fullstack')" class="cat-btn text-xs px-3.5 py-1.5 rounded-xl text-slate-400 hover:text-white hover:bg-slate-800 transition font-medium" data-cat="fullstack">
+        <i class="fa-solid fa-cubes mr-1.5 text-teal-400 text-[10px]"></i>Full-Stack
+      </button>
     </div>
   </section>
 
   <!-- Projects Grid -->
-  <section class="max-w-7xl mx-auto px-6 py-6">
+  <main class="max-w-7xl w-full mx-auto px-6 py-6">
     <div id="projectsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
 
-      <!-- Project 1: AgentPulse -->
-      <div class="project-card bg-slate-900 border border-slate-800 hover:border-slate-700 rounded-2xl p-6 shadow-xl flex flex-col justify-between transition group" data-category="agents">
+      <!-- Card 1: AgentPulse -->
+      <article class="glass-card rounded-2xl p-6 flex flex-col justify-between group" data-category="agents">
         <div class="space-y-4">
-          <div class="flex items-center justify-between">
-            <span class="text-[11px] font-mono font-bold uppercase tracking-wider px-2.5 py-1 rounded-md bg-indigo-950 text-indigo-300 border border-indigo-800">
-              <i class="fa-solid fa-brain mr-1.5"></i>AI Agents
+          <header class="flex items-center justify-between">
+            <span class="text-[11px] font-mono font-bold uppercase tracking-wider px-2.5 py-1 rounded-md bg-indigo-950/80 text-indigo-300 border border-indigo-800/80 flex items-center">
+              <i class="fa-solid fa-brain mr-1.5 text-indigo-400"></i>Autonomous AI Agents
             </span>
-            <span class="text-xs text-emerald-400 font-mono">8 / 8 Tests Passed ✅</span>
-          </div>
+            <span class="text-[11px] text-emerald-400 font-mono bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-800/60 flex items-center">
+              <i class="fa-solid fa-check-circle mr-1 text-[10px]"></i>8 / 8 Tests
+            </span>
+          </header>
+          
           <div>
-            <h3 class="text-lg font-bold text-white group-hover:text-emerald-400 transition">AgentPulse</h3>
-            <p class="text-xs text-slate-400 font-mono mt-0.5">Autonomous Multi-Agent Research & Synthesis Engine</p>
+            <h3 class="text-xl font-bold text-white group-hover:text-emerald-400 transition flex items-center">
+              AgentPulse
+              <span class="ml-2 text-[10px] font-mono uppercase bg-slate-800 text-slate-400 px-2 py-0.5 rounded">v1.0</span>
+            </h3>
+            <p class="text-xs text-indigo-300 font-mono mt-0.5">Multi-Agent Research & Fact-Checked Synthesis Engine</p>
           </div>
-          <p class="text-xs text-slate-300 leading-relaxed">
-            Deconstructs complex inquiries into structured DAG sub-tasks across 4 specialized agents (Planner, Researcher, Critic, Synthesizer). Gathers multi-source evidence, detects contradictions, and authors cited Markdown briefings.
-          </p>
-          <div class="flex flex-wrap gap-1.5 pt-1">
-            <span class="text-[10px] bg-slate-950 border border-slate-800 text-slate-400 px-2 py-0.5 rounded">Python 3.11</span>
-            <span class="text-[10px] bg-slate-950 border border-slate-800 text-slate-400 px-2 py-0.5 rounded">FastAPI</span>
-            <span class="text-[10px] bg-slate-950 border border-slate-800 text-slate-400 px-2 py-0.5 rounded">AsyncIO</span>
-            <span class="text-[10px] bg-slate-950 border border-slate-800 text-slate-400 px-2 py-0.5 rounded">ReAct DAG</span>
-          </div>
-        </div>
-        <div class="pt-6 border-t border-slate-800 mt-6 flex flex-wrap items-center justify-between gap-2">
-          <a href="https://github.com/shahzaib-shams2023/agentpulse-multi-agent-researcher" target="_blank" class="text-xs font-semibold text-slate-300 hover:text-white transition flex items-center space-x-1.5">
-            <i class="fa-brands fa-github text-sm"></i>
-            <span>GitHub Code</span>
-          </a>
-          <div class="flex items-center space-x-2">
-            <button onclick="openDemo('agentpulse')" class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 px-3 py-1.5 rounded-lg border border-slate-700 transition">
-              Architecture
-            </button>
-            <a href="https://shahzaib-shams2023.github.io/agentpulse-multi-agent-researcher/" target="_blank" class="text-xs font-semibold bg-indigo-600 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-lg transition shadow-md shadow-indigo-600/30 flex items-center space-x-1.5">
-              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-              <span>Launch Live App</span>
-            </a>
-          </div>
-        </div>
-      </div>
 
-      <!-- Project 2: QueryCraft -->
-      <div class="project-card bg-slate-900 border border-slate-800 hover:border-slate-700 rounded-2xl p-6 shadow-xl flex flex-col justify-between transition group" data-category="data">
-        <div class="space-y-4">
-          <div class="flex items-center justify-between">
-            <span class="text-[11px] font-mono font-bold uppercase tracking-wider px-2.5 py-1 rounded-md bg-emerald-950 text-emerald-300 border border-emerald-800">
-              <i class="fa-solid fa-database mr-1.5"></i>AI + Data Engineering
-            </span>
-            <span class="text-xs text-emerald-400 font-mono">14 / 14 Tests Passed ✅</span>
-          </div>
-          <div>
-            <h3 class="text-lg font-bold text-white group-hover:text-emerald-400 transition">QueryCraft</h3>
-            <p class="text-xs text-slate-400 font-mono mt-0.5">Enterprise Natural Language to SQL Analytics Platform</p>
-          </div>
           <p class="text-xs text-slate-300 leading-relaxed">
-            Bridges business users and relational databases with dynamic schema reflection, AST token security guardrails (strictly forbids DROP, DELETE, UPDATE), query execution sandbox, and automated Chart.js visualizer.
+            Deconstructs complex research queries into structured DAG sub-tasks across 4 specialized agents (Planner, Researcher, Critic, Synthesizer). Gathers multi-source evidence, flags logical contradictions, and compiles verifiable Markdown briefings with bracketed citations.
           </p>
-          <div class="flex flex-wrap gap-1.5 pt-1">
-            <span class="text-[10px] bg-slate-950 border border-slate-800 text-slate-400 px-2 py-0.5 rounded">FastAPI</span>
-            <span class="text-[10px] bg-slate-950 border border-slate-800 text-slate-400 px-2 py-0.5 rounded">SQLAlchemy 2.0</span>
-            <span class="text-[10px] bg-slate-950 border border-slate-800 text-slate-400 px-2 py-0.5 rounded">AST Guardrails</span>
-            <span class="text-[10px] bg-slate-950 border border-slate-800 text-slate-400 px-2 py-0.5 rounded">Chart.js</span>
-          </div>
-        </div>
-        <div class="pt-6 border-t border-slate-800 mt-6 flex flex-wrap items-center justify-between gap-2">
-          <a href="https://github.com/shahzaib-shams2023/querycraft-nl2sql-analytics" target="_blank" class="text-xs font-semibold text-slate-300 hover:text-white transition flex items-center space-x-1.5">
-            <i class="fa-brands fa-github text-sm"></i>
-            <span>GitHub Code</span>
-          </a>
-          <div class="flex items-center space-x-2">
-            <button onclick="openDemo('querycraft')" class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 px-3 py-1.5 rounded-lg border border-slate-700 transition">
-              Architecture
-            </button>
-            <a href="https://shahzaib-shams2023.github.io/querycraft-nl2sql-analytics/" target="_blank" class="text-xs font-semibold bg-emerald-600 hover:bg-emerald-500 text-white px-3 py-1.5 rounded-lg transition shadow-md shadow-emerald-600/30 flex items-center space-x-1.5">
-              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-              <span>Launch Live App</span>
-            </a>
-          </div>
-        </div>
-      </div>
 
-      <!-- Project 3: SentinelAI -->
-      <div class="project-card bg-slate-900 border border-slate-800 hover:border-slate-700 rounded-2xl p-6 shadow-xl flex flex-col justify-between transition group" data-category="cyber">
-        <div class="space-y-4">
-          <div class="flex items-center justify-between">
-            <span class="text-[11px] font-mono font-bold uppercase tracking-wider px-2.5 py-1 rounded-md bg-rose-950 text-rose-300 border border-rose-800">
-              <i class="fa-solid fa-shield-virus mr-1.5"></i>AI + Cybersecurity
-            </span>
-            <span class="text-xs text-emerald-400 font-mono">10 / 10 Tests Passed ✅</span>
+          <div class="p-3 bg-slate-950/60 rounded-xl border border-slate-800/80 text-[11px] space-y-1">
+            <div class="flex justify-between text-slate-400 font-mono"><span class="text-slate-500">Architecture:</span><span class="text-indigo-300">Directed Acyclic Graph (DAG)</span></div>
+            <div class="flex justify-between text-slate-400 font-mono"><span class="text-slate-500">Pipeline:</span><span>Planner ➔ Researcher ➔ Critic ➔ Synthesizer</span></div>
           </div>
-          <div>
-            <h3 class="text-lg font-bold text-white group-hover:text-emerald-400 transition">SentinelAI</h3>
-            <p class="text-xs text-slate-400 font-mono mt-0.5">Threat Intelligence & SIEM Log Anomaly Detector</p>
-          </div>
-          <p class="text-xs text-slate-300 leading-relaxed">
-            Ingests multi-format Syslog, CEF, and web access logs. Correlates multi-stage cyber attacks (brute force to sudo escalation), maps tactics to the MITRE ATT&CK framework, and generates automated SOC containment playbooks.
-          </p>
-          <div class="flex flex-wrap gap-1.5 pt-1">
-            <span class="text-[10px] bg-slate-950 border border-slate-800 text-slate-400 px-2 py-0.5 rounded">Python 3.11</span>
-            <span class="text-[10px] bg-slate-950 border border-slate-800 text-slate-400 px-2 py-0.5 rounded">FastAPI</span>
-            <span class="text-[10px] bg-slate-950 border border-slate-800 text-slate-400 px-2 py-0.5 rounded">MITRE ATT&CK</span>
-            <span class="text-[10px] bg-slate-950 border border-slate-800 text-slate-400 px-2 py-0.5 rounded">SOC Playbooks</span>
-          </div>
-        </div>
-        <div class="pt-6 border-t border-slate-800 mt-6 flex flex-wrap items-center justify-between gap-2">
-          <a href="https://github.com/shahzaib-shams2023/sentinel-ai-security-log-analyzer" target="_blank" class="text-xs font-semibold text-slate-300 hover:text-white transition flex items-center space-x-1.5">
-            <i class="fa-brands fa-github text-sm"></i>
-            <span>GitHub Code</span>
-          </a>
-          <div class="flex items-center space-x-2">
-            <button onclick="openDemo('sentinel')" class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 px-3 py-1.5 rounded-lg border border-slate-700 transition">
-              Architecture
-            </button>
-            <a href="https://shahzaib-shams2023.github.io/sentinel-ai-security-log-analyzer/" target="_blank" class="text-xs font-semibold bg-rose-600 hover:bg-rose-500 text-white px-3 py-1.5 rounded-lg transition shadow-md shadow-rose-600/30 flex items-center space-x-1.5">
-              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-              <span>Launch Live App</span>
-            </a>
-          </div>
-        </div>
-      </div>
 
-      <!-- Project 4: DocuFlow -->
-      <div class="project-card bg-slate-900 border border-slate-800 hover:border-slate-700 rounded-2xl p-6 shadow-xl flex flex-col justify-between transition group" data-category="automation">
-        <div class="space-y-4">
-          <div class="flex items-center justify-between">
-            <span class="text-[11px] font-mono font-bold uppercase tracking-wider px-2.5 py-1 rounded-md bg-blue-950 text-blue-300 border border-blue-800">
-              <i class="fa-solid fa-file-invoice-dollar mr-1.5"></i>AI Automation
-            </span>
-            <span class="text-xs text-emerald-400 font-mono">7 / 7 Tests Passed ✅</span>
-          </div>
-          <div>
-            <h3 class="text-lg font-bold text-white group-hover:text-emerald-400 transition">DocuFlow</h3>
-            <p class="text-xs text-slate-400 font-mono mt-0.5">Intelligent Document Processing & Invoice Ledger Reconciliation</p>
-          </div>
-          <p class="text-xs text-slate-300 leading-relaxed">
-            Extracts structured financial line items, taxes, and vendor data with strict Pydantic schemas. Enforces mathematical cross-multiplication ledger checks and outputs ERP accounting payloads (SAP/QuickBooks).
-          </p>
           <div class="flex flex-wrap gap-1.5 pt-1">
-            <span class="text-[10px] bg-slate-950 border border-slate-800 text-slate-400 px-2 py-0.5 rounded">FastAPI</span>
-            <span class="text-[10px] bg-slate-950 border border-slate-800 text-slate-400 px-2 py-0.5 rounded">Pydantic v2</span>
-            <span class="text-[10px] bg-slate-950 border border-slate-800 text-slate-400 px-2 py-0.5 rounded">Ledger Math Engine</span>
-            <span class="text-[10px] bg-slate-950 border border-slate-800 text-slate-400 px-2 py-0.5 rounded">ERP Webhooks</span>
+            <span class="text-[10px] font-mono bg-slate-900 border border-slate-800 text-slate-300 px-2 py-0.5 rounded">Python 3.11</span>
+            <span class="text-[10px] font-mono bg-slate-900 border border-slate-800 text-slate-300 px-2 py-0.5 rounded">FastAPI</span>
+            <span class="text-[10px] font-mono bg-slate-900 border border-slate-800 text-slate-300 px-2 py-0.5 rounded">AsyncIO</span>
+            <span class="text-[10px] font-mono bg-slate-900 border border-slate-800 text-slate-300 px-2 py-0.5 rounded">ReAct Pattern</span>
+            <span class="text-[10px] font-mono bg-slate-900 border border-slate-800 text-slate-300 px-2 py-0.5 rounded">Docker</span>
           </div>
         </div>
-        <div class="pt-6 border-t border-slate-800 mt-6 flex flex-wrap items-center justify-between gap-2">
-          <a href="https://github.com/shahzaib-shams2023/docuflow-intelligent-document-pipeline" target="_blank" class="text-xs font-semibold text-slate-300 hover:text-white transition flex items-center space-x-1.5">
-            <i class="fa-brands fa-github text-sm"></i>
-            <span>GitHub Code</span>
-          </a>
-          <div class="flex items-center space-x-2">
-            <button onclick="openDemo('docuflow')" class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 px-3 py-1.5 rounded-lg border border-slate-700 transition">
-              Architecture
-            </button>
-            <a href="https://shahzaib-shams2023.github.io/docuflow-intelligent-document-pipeline/" target="_blank" class="text-xs font-semibold bg-blue-600 hover:bg-blue-500 text-white px-3 py-1.5 rounded-lg transition shadow-md shadow-blue-600/30 flex items-center space-x-1.5">
-              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-              <span>Launch Live App</span>
-            </a>
-          </div>
-        </div>
-      </div>
 
-      <!-- Project 5: TalentMatch AI -->
-      <div class="project-card bg-slate-900 border border-slate-800 hover:border-slate-700 rounded-2xl p-6 shadow-xl flex flex-col justify-between transition group" data-category="fullstack">
-        <div class="space-y-4">
-          <div class="flex items-center justify-between">
-            <span class="text-[11px] font-mono font-bold uppercase tracking-wider px-2.5 py-1 rounded-md bg-teal-950 text-teal-300 border border-teal-800">
-              <i class="fa-solid fa-user-check mr-1.5"></i>AI + Full-Stack
-            </span>
-            <span class="text-xs text-emerald-400 font-mono">7 / 7 Tests Passed ✅</span>
-          </div>
-          <div>
-            <h3 class="text-lg font-bold text-white group-hover:text-emerald-400 transition">TalentMatch AI</h3>
-            <p class="text-xs text-slate-400 font-mono mt-0.5">Resume Screener & Rubric Evaluator with Bias Mitigation</p>
-          </div>
-          <p class="text-xs text-slate-300 leading-relaxed">
-            Evaluates candidate resumes across a 5-pillar weighted rubric (Tech Stack, Seniority, Architecture, Impact, Education), features a 1-click blind review demographic anonymizer, and generates tailored interview guides.
-          </p>
-          <div class="flex flex-wrap gap-1.5 pt-1">
-            <span class="text-[10px] bg-slate-950 border border-slate-800 text-slate-400 px-2 py-0.5 rounded">FastAPI</span>
-            <span class="text-[10px] bg-slate-950 border border-slate-800 text-slate-400 px-2 py-0.5 rounded">Radar Visualizer</span>
-            <span class="text-[10px] bg-slate-950 border border-slate-800 text-slate-400 px-2 py-0.5 rounded">Blind Anonymizer</span>
-            <span class="text-[10px] bg-slate-950 border border-slate-800 text-slate-400 px-2 py-0.5 rounded">Rubric Engine</span>
-          </div>
-        </div>
-        <div class="pt-6 border-t border-slate-800 mt-6 flex flex-wrap items-center justify-between gap-2">
-          <a href="https://github.com/shahzaib-shams2023/talentmatch-ai-resume-screener" target="_blank" class="text-xs font-semibold text-slate-300 hover:text-white transition flex items-center space-x-1.5">
+        <footer class="pt-6 border-t border-slate-800/80 mt-6 flex flex-wrap items-center justify-between gap-2">
+          <a href="https://github.com/shahzaib-shams2023/agentpulse-multi-agent-researcher" target="_blank" class="text-xs font-semibold text-slate-400 hover:text-white transition flex items-center space-x-1.5">
             <i class="fa-brands fa-github text-sm"></i>
-            <span>GitHub Code</span>
+            <span>Source Code</span>
           </a>
           <div class="flex items-center space-x-2">
-            <button onclick="openDemo('talentmatch')" class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 px-3 py-1.5 rounded-lg border border-slate-700 transition">
-              Architecture
+            <button onclick="openDemo('agentpulse')" class="text-xs bg-slate-800/80 hover:bg-slate-700 text-slate-300 px-3 py-1.5 rounded-lg border border-slate-700 transition">
+              <i class="fa-solid fa-diagram-project mr-1 text-[10px]"></i>Architecture
             </button>
-            <a href="https://shahzaib-shams2023.github.io/talentmatch-ai-resume-screener/" target="_blank" class="text-xs font-semibold bg-teal-600 hover:bg-teal-500 text-white px-3 py-1.5 rounded-lg transition shadow-md shadow-teal-600/30 flex items-center space-x-1.5">
-              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            <a href="https://shahzaib-shams2023.github.io/agentpulse-multi-agent-researcher/" target="_blank" class="text-xs font-semibold bg-gradient-to-r from-indigo-600 to-indigo-500 hover:from-indigo-500 hover:to-indigo-400 text-white px-3.5 py-1.5 rounded-lg transition shadow-md shadow-indigo-600/30 flex items-center space-x-1.5">
               <span>Launch Live App</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
             </a>
           </div>
-        </div>
-      </div>
+        </footer>
+      </article>
 
-      <!-- Project 6: PhishGuard -->
-      <div class="project-card bg-slate-900 border border-slate-800 hover:border-slate-700 rounded-2xl p-6 shadow-xl flex flex-col justify-between transition group" data-category="cyber">
+      <!-- Card 2: QueryCraft -->
+      <article class="glass-card rounded-2xl p-6 flex flex-col justify-between group" data-category="data">
         <div class="space-y-4">
-          <div class="flex items-center justify-between">
-            <span class="text-[11px] font-mono font-bold uppercase tracking-wider px-2.5 py-1 rounded-md bg-red-950 text-red-300 border border-red-800">
-              <i class="fa-solid fa-fish-fins mr-1.5"></i>AI + Cybersecurity
+          <header class="flex items-center justify-between">
+            <span class="text-[11px] font-mono font-bold uppercase tracking-wider px-2.5 py-1 rounded-md bg-emerald-950/80 text-emerald-300 border border-emerald-800/80 flex items-center">
+              <i class="fa-solid fa-database mr-1.5 text-emerald-400"></i>AI + Data Engineering
             </span>
-            <span class="text-xs text-emerald-400 font-mono">12 / 12 Tests Passed ✅</span>
-          </div>
+            <span class="text-[11px] text-emerald-400 font-mono bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-800/60 flex items-center">
+              <i class="fa-solid fa-check-circle mr-1 text-[10px]"></i>14 / 14 Tests
+            </span>
+          </header>
+          
           <div>
-            <h3 class="text-lg font-bold text-white group-hover:text-emerald-400 transition">PhishGuard</h3>
-            <p class="text-xs text-slate-400 font-mono mt-0.5">Phishing Threat & URL Forensic Analysis Engine</p>
+            <h3 class="text-xl font-bold text-white group-hover:text-emerald-400 transition flex items-center">
+              QueryCraft
+              <span class="ml-2 text-[10px] font-mono uppercase bg-slate-800 text-slate-400 px-2 py-0.5 rounded">v1.0</span>
+            </h3>
+            <p class="text-xs text-emerald-300 font-mono mt-0.5">Enterprise Natural Language to SQL Analytics & Guardrails</p>
           </div>
-          <p class="text-xs text-slate-300 leading-relaxed">
-            Performs forensic security analysis on inbound emails. Inspects RFC 822 SPF/DKIM/DMARC headers, detects psychological urgency cues, and analyzes hyperlinks for Punycode homoglyphs and Shannon domain entropy.
-          </p>
-          <div class="flex flex-wrap gap-1.5 pt-1">
-            <span class="text-[10px] bg-slate-950 border border-slate-800 text-slate-400 px-2 py-0.5 rounded">Python 3.11</span>
-            <span class="text-[10px] bg-slate-950 border border-slate-800 text-slate-400 px-2 py-0.5 rounded">FastAPI</span>
-            <span class="text-[10px] bg-slate-950 border border-slate-800 text-slate-400 px-2 py-0.5 rounded">Punycode / IDN</span>
-            <span class="text-[10px] bg-slate-950 border border-slate-800 text-slate-400 px-2 py-0.5 rounded">Header Forensics</span>
-          </div>
-        </div>
-        <div class="pt-6 border-t border-slate-800 mt-6 flex flex-wrap items-center justify-between gap-2">
-          <a href="https://github.com/shahzaib-shams2023/phishguard-phishing-threat-detector" target="_blank" class="text-xs font-semibold text-slate-300 hover:text-white transition flex items-center space-x-1.5">
-            <i class="fa-brands fa-github text-sm"></i>
-            <span>GitHub Code</span>
-          </a>
-          <div class="flex items-center space-x-2">
-            <button onclick="openDemo('phishguard')" class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 px-3 py-1.5 rounded-lg border border-slate-700 transition">
-              Architecture
-            </button>
-            <a href="https://shahzaib-shams2023.github.io/phishguard-phishing-threat-detector/" target="_blank" class="text-xs font-semibold bg-red-600 hover:bg-red-500 text-white px-3 py-1.5 rounded-lg transition shadow-md shadow-red-600/30 flex items-center space-x-1.5">
-              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-              <span>Launch Live App</span>
-            </a>
-          </div>
-        </div>
-      </div>
 
-      <!-- Project 7: SupportPulse -->
-      <div class="project-card bg-slate-900 border border-slate-800 hover:border-slate-700 rounded-2xl p-6 shadow-xl flex flex-col justify-between transition group" data-category="fullstack">
-        <div class="space-y-4">
-          <div class="flex items-center justify-between">
-            <span class="text-[11px] font-mono font-bold uppercase tracking-wider px-2.5 py-1 rounded-md bg-indigo-950 text-indigo-300 border border-indigo-800">
-              <i class="fa-solid fa-headset mr-1.5"></i>AI + Full-Stack
-            </span>
-            <span class="text-xs text-emerald-400 font-mono">10 / 10 Tests Passed ✅</span>
-          </div>
-          <div>
-            <h3 class="text-lg font-bold text-white group-hover:text-emerald-400 transition">SupportPulse</h3>
-            <p class="text-xs text-slate-400 font-mono mt-0.5">Customer Support Automation & Ticket Routing Platform</p>
-          </div>
           <p class="text-xs text-slate-300 leading-relaxed">
-            Autonomous support triage platform that classifies ticket intent and customer sentiment, retrieves verified internal knowledge via Vector RAG, drafts cited responses, and manages 15-minute P1 outage SLA escalations.
+            Translates plain-English inquiries into production SQL using dynamic database schema reflection, Abstract Syntax Tree (AST) validation to block destructive mutations (DROP, DELETE, UPDATE), and automated Chart.js visualizer.
           </p>
-          <div class="flex flex-wrap gap-1.5 pt-1">
-            <span class="text-[10px] bg-slate-950 border border-slate-800 text-slate-400 px-2 py-0.5 rounded">FastAPI</span>
-            <span class="text-[10px] bg-slate-950 border border-slate-800 text-slate-400 px-2 py-0.5 rounded">Vector RAG</span>
-            <span class="text-[10px] bg-slate-950 border border-slate-800 text-slate-400 px-2 py-0.5 rounded">SLA State Machine</span>
-            <span class="text-[10px] bg-slate-950 border border-slate-800 text-slate-400 px-2 py-0.5 rounded">Sentiment Engine</span>
-          </div>
-        </div>
-        <div class="pt-6 border-t border-slate-800 mt-6 flex flex-wrap items-center justify-between gap-2">
-          <a href="https://github.com/shahzaib-shams2023/supportpulse-ai-customer-platform" target="_blank" class="text-xs font-semibold text-slate-300 hover:text-white transition flex items-center space-x-1.5">
-            <i class="fa-brands fa-github text-sm"></i>
-            <span>GitHub Code</span>
-          </a>
-          <div class="flex items-center space-x-2">
-            <button onclick="openDemo('supportpulse')" class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 px-3 py-1.5 rounded-lg border border-slate-700 transition">
-              Architecture
-            </button>
-            <a href="https://shahzaib-shams2023.github.io/supportpulse-ai-customer-platform/" target="_blank" class="text-xs font-semibold bg-indigo-600 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-lg transition shadow-md shadow-indigo-600/30 flex items-center space-x-1.5">
-              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-              <span>Launch Live App</span>
-            </a>
-          </div>
-        </div>
-      </div>
 
-      <!-- Project 8: DataCleanse AI -->
-      <div class="project-card bg-slate-900 border border-slate-800 hover:border-slate-700 rounded-2xl p-6 shadow-xl flex flex-col justify-between transition group" data-category="data">
-        <div class="space-y-4">
-          <div class="flex items-center justify-between">
-            <span class="text-[11px] font-mono font-bold uppercase tracking-wider px-2.5 py-1 rounded-md bg-cyan-950 text-cyan-300 border border-cyan-800">
-              <i class="fa-solid fa-broom mr-1.5"></i>AI + Data Engineering
-            </span>
-            <span class="text-xs text-emerald-400 font-mono">9 / 9 Tests Passed ✅</span>
+          <div class="p-3 bg-slate-950/60 rounded-xl border border-slate-800/80 text-[11px] space-y-1">
+            <div class="flex justify-between text-slate-400 font-mono"><span class="text-slate-500">Security Gate:</span><span class="text-emerald-400">AST Token Guardrails (Read-Only)</span></div>
+            <div class="flex justify-between text-slate-400 font-mono"><span class="text-slate-500">Database Engine:</span><span>SQLAlchemy 2.0 (Postgres / SQLite)</span></div>
           </div>
-          <div>
-            <h3 class="text-lg font-bold text-white group-hover:text-emerald-400 transition">DataCleanse AI</h3>
-            <p class="text-xs text-slate-400 font-mono mt-0.5">Tabular Data Profiler & Automated Cleaning Copilot</p>
-          </div>
-          <p class="text-xs text-slate-300 leading-relaxed">
-            Automates data quality profiling for tabular datasets. Identifies statistical IQR outliers, unmasked PII leaks, and datetime formatting drift, renders before/after diffs, and synthesizes executable Pandas ETL scripts.
-          </p>
+
           <div class="flex flex-wrap gap-1.5 pt-1">
-            <span class="text-[10px] bg-slate-950 border border-slate-800 text-slate-400 px-2 py-0.5 rounded">Python 3.11</span>
-            <span class="text-[10px] bg-slate-950 border border-slate-800 text-slate-400 px-2 py-0.5 rounded">FastAPI</span>
-            <span class="text-[10px] bg-slate-950 border border-slate-800 text-slate-400 px-2 py-0.5 rounded">Statistical IQR</span>
-            <span class="text-[10px] bg-slate-950 border border-slate-800 text-slate-400 px-2 py-0.5 rounded">Pandas CodeGen</span>
+            <span class="text-[10px] font-mono bg-slate-900 border border-slate-800 text-slate-300 px-2 py-0.5 rounded">FastAPI</span>
+            <span class="text-[10px] font-mono bg-slate-900 border border-slate-800 text-slate-300 px-2 py-0.5 rounded">SQLAlchemy 2.0</span>
+            <span class="text-[10px] font-mono bg-slate-900 border border-slate-800 text-slate-300 px-2 py-0.5 rounded">SQLGlot / AST</span>
+            <span class="text-[10px] font-mono bg-slate-900 border border-slate-800 text-slate-300 px-2 py-0.5 rounded">Chart.js</span>
+            <span class="text-[10px] font-mono bg-slate-900 border border-slate-800 text-slate-300 px-2 py-0.5 rounded">Schema Reflection</span>
           </div>
         </div>
-        <div class="pt-6 border-t border-slate-800 mt-6 flex flex-wrap items-center justify-between gap-2">
-          <a href="https://github.com/shahzaib-shams2023/datacleanse-ai-data-profiling" target="_blank" class="text-xs font-semibold text-slate-300 hover:text-white transition flex items-center space-x-1.5">
+
+        <footer class="pt-6 border-t border-slate-800/80 mt-6 flex flex-wrap items-center justify-between gap-2">
+          <a href="https://github.com/shahzaib-shams2023/querycraft-nl2sql-analytics" target="_blank" class="text-xs font-semibold text-slate-400 hover:text-white transition flex items-center space-x-1.5">
             <i class="fa-brands fa-github text-sm"></i>
-            <span>GitHub Code</span>
+            <span>Source Code</span>
           </a>
           <div class="flex items-center space-x-2">
-            <button onclick="openDemo('datacleanse')" class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 px-3 py-1.5 rounded-lg border border-slate-700 transition">
-              Architecture
+            <button onclick="openDemo('querycraft')" class="text-xs bg-slate-800/80 hover:bg-slate-700 text-slate-300 px-3 py-1.5 rounded-lg border border-slate-700 transition">
+              <i class="fa-solid fa-diagram-project mr-1 text-[10px]"></i>Architecture
             </button>
-            <a href="https://shahzaib-shams2023.github.io/datacleanse-ai-data-profiling/" target="_blank" class="text-xs font-semibold bg-cyan-600 hover:bg-cyan-500 text-white px-3 py-1.5 rounded-lg transition shadow-md shadow-cyan-600/30 flex items-center space-x-1.5">
-              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            <a href="https://shahzaib-shams2023.github.io/querycraft-nl2sql-analytics/" target="_blank" class="text-xs font-semibold bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white px-3.5 py-1.5 rounded-lg transition shadow-md shadow-emerald-600/30 flex items-center space-x-1.5">
               <span>Launch Live App</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
             </a>
           </div>
+        </footer>
+      </article>
+
+      <!-- Card 3: SentinelAI -->
+      <article class="glass-card rounded-2xl p-6 flex flex-col justify-between group" data-category="cyber">
+        <div class="space-y-4">
+          <header class="flex items-center justify-between">
+            <span class="text-[11px] font-mono font-bold uppercase tracking-wider px-2.5 py-1 rounded-md bg-rose-950/80 text-rose-300 border border-rose-800/80 flex items-center">
+              <i class="fa-solid fa-shield-virus mr-1.5 text-rose-400"></i>AI + Cybersecurity
+            </span>
+            <span class="text-[11px] text-emerald-400 font-mono bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-800/60 flex items-center">
+              <i class="fa-solid fa-check-circle mr-1 text-[10px]"></i>10 / 10 Tests
+            </span>
+          </header>
+          
+          <div>
+            <h3 class="text-xl font-bold text-white group-hover:text-emerald-400 transition flex items-center">
+              SentinelAI
+              <span class="ml-2 text-[10px] font-mono uppercase bg-slate-800 text-slate-400 px-2 py-0.5 rounded">v1.0</span>
+            </h3>
+            <p class="text-xs text-rose-300 font-mono mt-0.5">Threat Intelligence & SIEM Log Anomaly Detector</p>
+          </div>
+
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Parses heterogeneous Syslog, CEF, and web access streams. Correlates multi-stage cyber attack kill chains (SSH brute force followed by sudo privilege escalation), maps findings to the MITRE ATT&CK Matrix, and outputs automated shell containment playbooks.
+          </p>
+
+          <div class="p-3 bg-slate-950/60 rounded-xl border border-slate-800/80 text-[11px] space-y-1">
+            <div class="flex justify-between text-slate-400 font-mono"><span class="text-slate-500">Framework:</span><span class="text-rose-400">MITRE ATT&CK TTP Alignment</span></div>
+            <div class="flex justify-between text-slate-400 font-mono"><span class="text-slate-500">Remediation:</span><span>Automated Firewall / iptables Containment</span></div>
+          </div>
+
+          <div class="flex flex-wrap gap-1.5 pt-1">
+            <span class="text-[10px] font-mono bg-slate-900 border border-slate-800 text-slate-300 px-2 py-0.5 rounded">Python 3.11</span>
+            <span class="text-[10px] font-mono bg-slate-900 border border-slate-800 text-slate-300 px-2 py-0.5 rounded">FastAPI</span>
+            <span class="text-[10px] font-mono bg-slate-900 border border-slate-800 text-slate-300 px-2 py-0.5 rounded">MITRE ATT&CK</span>
+            <span class="text-[10px] font-mono bg-slate-900 border border-slate-800 text-slate-300 px-2 py-0.5 rounded">SOC Playbooks</span>
+            <span class="text-[10px] font-mono bg-slate-900 border border-slate-800 text-slate-300 px-2 py-0.5 rounded">Regex Engines</span>
+          </div>
         </div>
-      </div>
+
+        <footer class="pt-6 border-t border-slate-800/80 mt-6 flex flex-wrap items-center justify-between gap-2">
+          <a href="https://github.com/shahzaib-shams2023/sentinel-ai-security-log-analyzer" target="_blank" class="text-xs font-semibold text-slate-400 hover:text-white transition flex items-center space-x-1.5">
+            <i class="fa-brands fa-github text-sm"></i>
+            <span>Source Code</span>
+          </a>
+          <div class="flex items-center space-x-2">
+            <button onclick="openDemo('sentinel')" class="text-xs bg-slate-800/80 hover:bg-slate-700 text-slate-300 px-3 py-1.5 rounded-lg border border-slate-700 transition">
+              <i class="fa-solid fa-diagram-project mr-1 text-[10px]"></i>Architecture
+            </button>
+            <a href="https://shahzaib-shams2023.github.io/sentinel-ai-security-log-analyzer/" target="_blank" class="text-xs font-semibold bg-gradient-to-r from-rose-600 to-rose-500 hover:from-rose-500 hover:to-rose-400 text-white px-3.5 py-1.5 rounded-lg transition shadow-md shadow-rose-600/30 flex items-center space-x-1.5">
+              <span>Launch Live App</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+          </div>
+        </footer>
+      </article>
+
+      <!-- Card 4: DocuFlow -->
+      <article class="glass-card rounded-2xl p-6 flex flex-col justify-between group" data-category="automation">
+        <div class="space-y-4">
+          <header class="flex items-center justify-between">
+            <span class="text-[11px] font-mono font-bold uppercase tracking-wider px-2.5 py-1 rounded-md bg-blue-950/80 text-blue-300 border border-blue-800/80 flex items-center">
+              <i class="fa-solid fa-file-invoice-dollar mr-1.5 text-blue-400"></i>AI Automation
+            </span>
+            <span class="text-[11px] text-emerald-400 font-mono bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-800/60 flex items-center">
+              <i class="fa-solid fa-check-circle mr-1 text-[10px]"></i>7 / 7 Tests
+            </span>
+          </header>
+          
+          <div>
+            <h3 class="text-xl font-bold text-white group-hover:text-emerald-400 transition flex items-center">
+              DocuFlow
+              <span class="ml-2 text-[10px] font-mono uppercase bg-slate-800 text-slate-400 px-2 py-0.5 rounded">v1.0</span>
+            </h3>
+            <p class="text-xs text-blue-300 font-mono mt-0.5">Intelligent Document Processing & Ledger Math Reconciliation</p>
+          </div>
+
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Extracts structured financial line items, taxes, and vendor entities from OCR and PDF text dumps. Verifies double-entry ledger mathematics (Qty × Price == Total; Subtotal + Tax == Total) and generates SAP S/4HANA & QuickBooks ERP payloads.
+          </p>
+
+          <div class="p-3 bg-slate-950/60 rounded-xl border border-slate-800/80 text-[11px] space-y-1">
+            <div class="flex justify-between text-slate-400 font-mono"><span class="text-slate-500">Validation:</span><span class="text-blue-400">Pydantic v2 Typed Schema & Math Audit</span></div>
+            <div class="flex justify-between text-slate-400 font-mono"><span class="text-slate-500">Integrations:</span><span>SAP S/4HANA & QuickBooks ERP Payload</span></div>
+          </div>
+
+          <div class="flex flex-wrap gap-1.5 pt-1">
+            <span class="text-[10px] font-mono bg-slate-900 border border-slate-800 text-slate-300 px-2 py-0.5 rounded">FastAPI</span>
+            <span class="text-[10px] font-mono bg-slate-900 border border-slate-800 text-slate-300 px-2 py-0.5 rounded">Pydantic v2</span>
+            <span class="text-[10px] font-mono bg-slate-900 border border-slate-800 text-slate-300 px-2 py-0.5 rounded">OCR Normalizer</span>
+            <span class="text-[10px] font-mono bg-slate-900 border border-slate-800 text-slate-300 px-2 py-0.5 rounded">Ledger Math Engine</span>
+            <span class="text-[10px] font-mono bg-slate-900 border border-slate-800 text-slate-300 px-2 py-0.5 rounded">ERP Webhooks</span>
+          </div>
+        </div>
+
+        <footer class="pt-6 border-t border-slate-800/80 mt-6 flex flex-wrap items-center justify-between gap-2">
+          <a href="https://github.com/shahzaib-shams2023/docuflow-intelligent-document-pipeline" target="_blank" class="text-xs font-semibold text-slate-400 hover:text-white transition flex items-center space-x-1.5">
+            <i class="fa-brands fa-github text-sm"></i>
+            <span>Source Code</span>
+          </a>
+          <div class="flex items-center space-x-2">
+            <button onclick="openDemo('docuflow')" class="text-xs bg-slate-800/80 hover:bg-slate-700 text-slate-300 px-3 py-1.5 rounded-lg border border-slate-700 transition">
+              <i class="fa-solid fa-diagram-project mr-1 text-[10px]"></i>Architecture
+            </button>
+            <a href="https://shahzaib-shams2023.github.io/docuflow-intelligent-document-pipeline/" target="_blank" class="text-xs font-semibold bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 text-white px-3.5 py-1.5 rounded-lg transition shadow-md shadow-blue-600/30 flex items-center space-x-1.5">
+              <span>Launch Live App</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+          </div>
+        </footer>
+      </article>
+
+      <!-- Card 5: TalentMatch AI -->
+      <article class="glass-card rounded-2xl p-6 flex flex-col justify-between group" data-category="fullstack">
+        <div class="space-y-4">
+          <header class="flex items-center justify-between">
+            <span class="text-[11px] font-mono font-bold uppercase tracking-wider px-2.5 py-1 rounded-md bg-teal-950/80 text-teal-300 border border-teal-800/80 flex items-center">
+              <i class="fa-solid fa-user-check mr-1.5 text-teal-400"></i>AI + Full-Stack
+            </span>
+            <span class="text-[11px] text-emerald-400 font-mono bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-800/60 flex items-center">
+              <i class="fa-solid fa-check-circle mr-1 text-[10px]"></i>7 / 7 Tests
+            </span>
+          </header>
+          
+          <div>
+            <h3 class="text-xl font-bold text-white group-hover:text-emerald-400 transition flex items-center">
+              TalentMatch AI
+              <span class="ml-2 text-[10px] font-mono uppercase bg-slate-800 text-slate-400 px-2 py-0.5 rounded">v1.0</span>
+            </h3>
+            <p class="text-xs text-teal-300 font-mono mt-0.5">Resume Screener & Rubric Evaluator with Bias Mitigation</p>
+          </div>
+
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Evaluates candidate profiles across a 5-pillar rubric (Tech Stack, Experience, Architecture, Impact, Education). Features a 1-click blind review demographic anonymizer, Chart.js radar graph visualizer, and tailored gap-targeted interview questions.
+          </p>
+
+          <div class="p-3 bg-slate-950/60 rounded-xl border border-slate-800/80 text-[11px] space-y-1">
+            <div class="flex justify-between text-slate-400 font-mono"><span class="text-slate-500">Equity Guard:</span><span class="text-teal-400">Demographic Anonymizer (Blind Review)</span></div>
+            <div class="flex justify-between text-slate-400 font-mono"><span class="text-slate-500">Visualization:</span><span>5-Pillar Chart.js Radar Metric Display</span></div>
+          </div>
+
+          <div class="flex flex-wrap gap-1.5 pt-1">
+            <span class="text-[10px] font-mono bg-slate-900 border border-slate-800 text-slate-300 px-2 py-0.5 rounded">FastAPI</span>
+            <span class="text-[10px] font-mono bg-slate-900 border border-slate-800 text-slate-300 px-2 py-0.5 rounded">Radar Visualizer</span>
+            <span class="text-[10px] font-mono bg-slate-900 border border-slate-800 text-slate-300 px-2 py-0.5 rounded">Blind Anonymizer</span>
+            <span class="text-[10px] font-mono bg-slate-900 border border-slate-800 text-slate-300 px-2 py-0.5 rounded">Rubric Engine</span>
+            <span class="text-[10px] font-mono bg-slate-900 border border-slate-800 text-slate-300 px-2 py-0.5 rounded">Chart.js</span>
+          </div>
+        </div>
+
+        <footer class="pt-6 border-t border-slate-800/80 mt-6 flex flex-wrap items-center justify-between gap-2">
+          <a href="https://github.com/shahzaib-shams2023/talentmatch-ai-resume-screener" target="_blank" class="text-xs font-semibold text-slate-400 hover:text-white transition flex items-center space-x-1.5">
+            <i class="fa-brands fa-github text-sm"></i>
+            <span>Source Code</span>
+          </a>
+          <div class="flex items-center space-x-2">
+            <button onclick="openDemo('talentmatch')" class="text-xs bg-slate-800/80 hover:bg-slate-700 text-slate-300 px-3 py-1.5 rounded-lg border border-slate-700 transition">
+              <i class="fa-solid fa-diagram-project mr-1 text-[10px]"></i>Architecture
+            </button>
+            <a href="https://shahzaib-shams2023.github.io/talentmatch-ai-resume-screener/" target="_blank" class="text-xs font-semibold bg-gradient-to-r from-teal-600 to-teal-500 hover:from-teal-500 hover:to-teal-400 text-white px-3.5 py-1.5 rounded-lg transition shadow-md shadow-teal-600/30 flex items-center space-x-1.5">
+              <span>Launch Live App</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+          </div>
+        </footer>
+      </article>
+
+      <!-- Card 6: PhishGuard -->
+      <article class="glass-card rounded-2xl p-6 flex flex-col justify-between group" data-category="cyber">
+        <div class="space-y-4">
+          <header class="flex items-center justify-between">
+            <span class="text-[11px] font-mono font-bold uppercase tracking-wider px-2.5 py-1 rounded-md bg-red-950/80 text-red-300 border border-red-800/80 flex items-center">
+              <i class="fa-solid fa-fish-fins mr-1.5 text-red-400"></i>AI + Cybersecurity
+            </span>
+            <span class="text-[11px] text-emerald-400 font-mono bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-800/60 flex items-center">
+              <i class="fa-solid fa-check-circle mr-1 text-[10px]"></i>12 / 12 Tests
+            </span>
+          </header>
+          
+          <div>
+            <h3 class="text-xl font-bold text-white group-hover:text-emerald-400 transition flex items-center">
+              PhishGuard
+              <span class="ml-2 text-[10px] font-mono uppercase bg-slate-800 text-slate-400 px-2 py-0.5 rounded">v1.0</span>
+            </h3>
+            <p class="text-xs text-red-300 font-mono mt-0.5">Phishing Threat & URL Forensic Analysis Engine</p>
+          </div>
+
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Forensically analyzes raw inbound emails. Scrutinizes RFC 822 SPF/DKIM/DMARC authentication records, detects social engineering urgency linguistics, and flags Punycode IDN homoglyphs and typosquatting destinations.
+          </p>
+
+          <div class="p-3 bg-slate-950/60 rounded-xl border border-slate-800/80 text-[11px] space-y-1">
+            <div class="flex justify-between text-slate-400 font-mono"><span class="text-slate-500">Forensics:</span><span class="text-red-400">RFC 822 Mail Authentication & Relay Check</span></div>
+            <div class="flex justify-between text-slate-400 font-mono"><span class="text-slate-500">URL Defense:</span><span>Punycode Homoglyph & Shannon Entropy Engine</span></div>
+          </div>
+
+          <div class="flex flex-wrap gap-1.5 pt-1">
+            <span class="text-[10px] font-mono bg-slate-900 border border-slate-800 text-slate-300 px-2 py-0.5 rounded">Python 3.11</span>
+            <span class="text-[10px] font-mono bg-slate-900 border border-slate-800 text-slate-300 px-2 py-0.5 rounded">FastAPI</span>
+            <span class="text-[10px] font-mono bg-slate-900 border border-slate-800 text-slate-300 px-2 py-0.5 rounded">Punycode / IDN</span>
+            <span class="text-[10px] font-mono bg-slate-900 border border-slate-800 text-slate-300 px-2 py-0.5 rounded">Header Forensics</span>
+            <span class="text-[10px] font-mono bg-slate-900 border border-slate-800 text-slate-300 px-2 py-0.5 rounded">Threat Scoring</span>
+          </div>
+        </div>
+
+        <footer class="pt-6 border-t border-slate-800/80 mt-6 flex flex-wrap items-center justify-between gap-2">
+          <a href="https://github.com/shahzaib-shams2023/phishguard-phishing-threat-detector" target="_blank" class="text-xs font-semibold text-slate-400 hover:text-white transition flex items-center space-x-1.5">
+            <i class="fa-brands fa-github text-sm"></i>
+            <span>Source Code</span>
+          </a>
+          <div class="flex items-center space-x-2">
+            <button onclick="openDemo('phishguard')" class="text-xs bg-slate-800/80 hover:bg-slate-700 text-slate-300 px-3 py-1.5 rounded-lg border border-slate-700 transition">
+              <i class="fa-solid fa-diagram-project mr-1 text-[10px]"></i>Architecture
+            </button>
+            <a href="https://shahzaib-shams2023.github.io/phishguard-phishing-threat-detector/" target="_blank" class="text-xs font-semibold bg-gradient-to-r from-red-600 to-red-500 hover:from-red-500 hover:to-red-400 text-white px-3.5 py-1.5 rounded-lg transition shadow-md shadow-red-600/30 flex items-center space-x-1.5">
+              <span>Launch Live App</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+          </div>
+        </footer>
+      </article>
+
+      <!-- Card 7: SupportPulse -->
+      <article class="glass-card rounded-2xl p-6 flex flex-col justify-between group" data-category="fullstack">
+        <div class="space-y-4">
+          <header class="flex items-center justify-between">
+            <span class="text-[11px] font-mono font-bold uppercase tracking-wider px-2.5 py-1 rounded-md bg-indigo-950/80 text-indigo-300 border border-indigo-800/80 flex items-center">
+              <i class="fa-solid fa-headset mr-1.5 text-indigo-400"></i>AI + Full-Stack
+            </span>
+            <span class="text-[11px] text-emerald-400 font-mono bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-800/60 flex items-center">
+              <i class="fa-solid fa-check-circle mr-1 text-[10px]"></i>10 / 10 Tests
+            </span>
+          </header>
+          
+          <div>
+            <h3 class="text-xl font-bold text-white group-hover:text-emerald-400 transition flex items-center">
+              SupportPulse
+              <span class="ml-2 text-[10px] font-mono uppercase bg-slate-800 text-slate-400 px-2 py-0.5 rounded">v1.0</span>
+            </h3>
+            <p class="text-xs text-indigo-300 font-mono mt-0.5">Customer Support Automation & Ticket Routing Platform</p>
+          </div>
+
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Multi-channel ticket triage automation with customer sentiment and intent classification, Vector RAG retrieval across corporate knowledge articles, grounded response synthesis with policy citations, and 15-minute P1 churn SLA routing.
+          </p>
+
+          <div class="p-3 bg-slate-950/60 rounded-xl border border-slate-800/80 text-[11px] space-y-1">
+            <div class="flex justify-between text-slate-400 font-mono"><span class="text-slate-500">RAG Grounding:</span><span class="text-indigo-400">Vector Knowledge Base Embeddings</span></div>
+            <div class="flex justify-between text-slate-400 font-mono"><span class="text-slate-500">SLA Dispatch:</span><span>15m P1 Outage & Churn Escalation Engine</span></div>
+          </div>
+
+          <div class="flex flex-wrap gap-1.5 pt-1">
+            <span class="text-[10px] font-mono bg-slate-900 border border-slate-800 text-slate-300 px-2 py-0.5 rounded">FastAPI</span>
+            <span class="text-[10px] font-mono bg-slate-900 border border-slate-800 text-slate-300 px-2 py-0.5 rounded">Vector RAG</span>
+            <span class="text-[10px] font-mono bg-slate-900 border border-slate-800 text-slate-300 px-2 py-0.5 rounded">SLA State Machine</span>
+            <span class="text-[10px] font-mono bg-slate-900 border border-slate-800 text-slate-300 px-2 py-0.5 rounded">Sentiment Engine</span>
+            <span class="text-[10px] font-mono bg-slate-900 border border-slate-800 text-slate-300 px-2 py-0.5 rounded">Docker</span>
+          </div>
+        </div>
+
+        <footer class="pt-6 border-t border-slate-800/80 mt-6 flex flex-wrap items-center justify-between gap-2">
+          <a href="https://github.com/shahzaib-shams2023/supportpulse-ai-customer-platform" target="_blank" class="text-xs font-semibold text-slate-400 hover:text-white transition flex items-center space-x-1.5">
+            <i class="fa-brands fa-github text-sm"></i>
+            <span>Source Code</span>
+          </a>
+          <div class="flex items-center space-x-2">
+            <button onclick="openDemo('supportpulse')" class="text-xs bg-slate-800/80 hover:bg-slate-700 text-slate-300 px-3 py-1.5 rounded-lg border border-slate-700 transition">
+              <i class="fa-solid fa-diagram-project mr-1 text-[10px]"></i>Architecture
+            </button>
+            <a href="https://shahzaib-shams2023.github.io/supportpulse-ai-customer-platform/" target="_blank" class="text-xs font-semibold bg-gradient-to-r from-indigo-600 to-indigo-500 hover:from-indigo-500 hover:to-indigo-400 text-white px-3.5 py-1.5 rounded-lg transition shadow-md shadow-indigo-600/30 flex items-center space-x-1.5">
+              <span>Launch Live App</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+          </div>
+        </footer>
+      </article>
+
+      <!-- Card 8: DataCleanse AI -->
+      <article class="glass-card rounded-2xl p-6 flex flex-col justify-between group" data-category="data">
+        <div class="space-y-4">
+          <header class="flex items-center justify-between">
+            <span class="text-[11px] font-mono font-bold uppercase tracking-wider px-2.5 py-1 rounded-md bg-cyan-950/80 text-cyan-300 border border-cyan-800/80 flex items-center">
+              <i class="fa-solid fa-broom mr-1.5 text-cyan-400"></i>AI + Data Engineering
+            </span>
+            <span class="text-[11px] text-emerald-400 font-mono bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-800/60 flex items-center">
+              <i class="fa-solid fa-check-circle mr-1 text-[10px]"></i>9 / 9 Tests
+            </span>
+          </header>
+          
+          <div>
+            <h3 class="text-xl font-bold text-white group-hover:text-emerald-400 transition flex items-center">
+              DataCleanse AI
+              <span class="ml-2 text-[10px] font-mono uppercase bg-slate-800 text-slate-400 px-2 py-0.5 rounded">v1.0</span>
+            </h3>
+            <p class="text-xs text-cyan-300 font-mono mt-0.5">Tabular Data Profiler & Automated Cleaning Copilot</p>
+          </div>
+
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Automates data hygiene profiling for CSV and JSON datasets. Detects IQR statistical anomalies, unmasked SSN/PII leaks, and ISO-8601 datetime drifts, rendering before/after diffs and synthesizing executable Python Pandas cleaning code.
+          </p>
+
+          <div class="p-3 bg-slate-950/60 rounded-xl border border-slate-800/80 text-[11px] space-y-1">
+            <div class="flex justify-between text-slate-400 font-mono"><span class="text-slate-500">Statistics:</span><span class="text-cyan-400">IQR Outliers & PII Regex Scanner</span></div>
+            <div class="flex justify-between text-slate-400 font-mono"><span class="text-slate-500">Synthesis:</span><span>Executable Pandas Code Generator</span></div>
+          </div>
+
+          <div class="flex flex-wrap gap-1.5 pt-1">
+            <span class="text-[10px] font-mono bg-slate-900 border border-slate-800 text-slate-300 px-2 py-0.5 rounded">Python 3.11</span>
+            <span class="text-[10px] font-mono bg-slate-900 border border-slate-800 text-slate-300 px-2 py-0.5 rounded">FastAPI</span>
+            <span class="text-[10px] font-mono bg-slate-900 border border-slate-800 text-slate-300 px-2 py-0.5 rounded">Statistical IQR</span>
+            <span class="text-[10px] font-mono bg-slate-900 border border-slate-800 text-slate-300 px-2 py-0.5 rounded">Pandas CodeGen</span>
+            <span class="text-[10px] font-mono bg-slate-900 border border-slate-800 text-slate-300 px-2 py-0.5 rounded">PII Detection</span>
+          </div>
+        </div>
+
+        <footer class="pt-6 border-t border-slate-800/80 mt-6 flex flex-wrap items-center justify-between gap-2">
+          <a href="https://github.com/shahzaib-shams2023/datacleanse-ai-data-profiling" target="_blank" class="text-xs font-semibold text-slate-400 hover:text-white transition flex items-center space-x-1.5">
+            <i class="fa-brands fa-github text-sm"></i>
+            <span>Source Code</span>
+          </a>
+          <div class="flex items-center space-x-2">
+            <button onclick="openDemo('datacleanse')" class="text-xs bg-slate-800/80 hover:bg-slate-700 text-slate-300 px-3 py-1.5 rounded-lg border border-slate-700 transition">
+              <i class="fa-solid fa-diagram-project mr-1 text-[10px]"></i>Architecture
+            </button>
+            <a href="https://shahzaib-shams2023.github.io/datacleanse-ai-data-profiling/" target="_blank" class="text-xs font-semibold bg-gradient-to-r from-cyan-600 to-cyan-500 hover:from-cyan-500 hover:to-cyan-400 text-white px-3.5 py-1.5 rounded-lg transition shadow-md shadow-cyan-600/30 flex items-center space-x-1.5">
+              <span>Launch Live App</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+          </div>
+        </footer>
+      </article>
 
     </div>
-  </section>
+  </main>
 
-  <!-- Interactive Demo Modal -->
-  <div id="demoModal" class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
-    <div class="bg-slate-900 border border-slate-800 rounded-2xl max-w-3xl w-full p-6 shadow-2xl space-y-4 max-h-[85vh] flex flex-col">
+  <!-- Interactive Architecture Modal -->
+  <div id="demoModal" class="hidden fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="glass-panel border border-slate-700/80 rounded-2xl max-w-3xl w-full p-6 shadow-2xl space-y-4 max-h-[85vh] flex flex-col">
       <div class="flex items-center justify-between border-b border-slate-800 pb-3">
-        <div class="flex items-center space-x-2">
-          <i id="modalIcon" class="fa-solid fa-laptop-code text-emerald-400"></i>
-          <h3 id="modalTitle" class="text-base font-bold text-white">Interactive Project Simulation</h3>
+        <div class="flex items-center space-x-2.5">
+          <div id="modalIconContainer" class="w-8 h-8 rounded-lg bg-emerald-950 border border-emerald-800/80 flex items-center justify-center text-emerald-400 text-sm">
+            <i id="modalIcon" class="fa-solid fa-network-wired"></i>
+          </div>
+          <div>
+            <h3 id="modalTitle" class="text-base font-bold text-white">System Architecture & Pipeline</h3>
+            <p id="modalSubtitle" class="text-xs text-slate-400 font-mono">Component Blueprint & Execution Graph</p>
+          </div>
         </div>
-        <button onclick="closeDemo()" class="text-slate-400 hover:text-white"><i class="fa-solid fa-xmark text-lg"></i></button>
+        <button onclick="closeDemo()" class="text-slate-400 hover:text-white p-1.5 rounded-lg hover:bg-slate-800 transition">
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
       </div>
-      <div id="modalBody" class="flex-1 overflow-y-auto space-y-3 text-xs pr-1"></div>
-      <div class="pt-3 border-t border-slate-800 flex justify-between items-center">
-        <a id="modalRepoLink" href="#" target="_blank" class="text-xs text-emerald-400 hover:underline flex items-center space-x-1">
-          <i class="fa-brands fa-github"></i>
-          <span>View Source Repository</span>
+
+      <div class="flex-1 overflow-y-auto space-y-4 pr-1 text-xs">
+        <div>
+          <h4 class="font-mono text-slate-400 uppercase tracking-wider text-[11px] mb-1 font-semibold">Architecture Overview</h4>
+          <p id="modalDesc" class="text-slate-300 leading-relaxed"></p>
+        </div>
+
+        <div>
+          <h4 class="font-mono text-slate-400 uppercase tracking-wider text-[11px] mb-2 font-semibold">Directed Pipeline Flow</h4>
+          <pre id="modalDiagram" class="bg-slate-950 p-4 rounded-xl border border-slate-800 font-mono text-emerald-400 text-xs overflow-x-auto leading-relaxed"></pre>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3 pt-1">
+          <div class="p-3 rounded-xl bg-slate-950 border border-slate-800">
+            <span class="text-slate-500 uppercase tracking-wider text-[10px] block font-mono font-semibold">Reliability & Testing</span>
+            <span id="modalTests" class="text-emerald-400 font-mono font-bold mt-0.5 block"></span>
+          </div>
+          <div class="p-3 rounded-xl bg-slate-950 border border-slate-800">
+            <span class="text-slate-500 uppercase tracking-wider text-[10px] block font-mono font-semibold">Deployment Target</span>
+            <span id="modalDeploy" class="text-teal-400 font-mono font-bold mt-0.5 block"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="pt-3 border-t border-slate-800 flex items-center justify-between">
+        <a id="modalGithubLink" href="#" target="_blank" class="text-xs font-semibold text-slate-400 hover:text-white transition flex items-center space-x-1.5">
+          <i class="fa-brands fa-github text-sm"></i>
+          <span>Inspect Code Repository</span>
         </a>
-        <button onclick="closeDemo()" class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-200 px-4 py-2 rounded-lg transition">Close</button>
+        <a id="modalLiveLink" href="#" target="_blank" class="text-xs font-semibold bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-2 rounded-lg transition shadow-md shadow-emerald-600/20 flex items-center space-x-1.5">
+          <span>Open Dedicated Live Application</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+        </a>
       </div>
     </div>
   </div>
 
   <!-- Footer -->
-  <footer class="border-t border-slate-800/80 bg-slate-950 py-10 mt-16 text-center text-xs text-slate-500">
-    <div class="max-w-7xl mx-auto px-6 space-y-2">
-      <p>Crafted by <strong>Shahzaib</strong> • Production AI & Software Engineering Portfolio</p>
-      <p class="text-[11px] text-slate-600">All 8 repositories are open-source and licensed under the MIT License.</p>
+  <footer class="border-t border-slate-800/80 bg-slate-950/90 py-12 px-6 mt-16 text-center text-xs text-slate-500">
+    <div class="max-w-7xl mx-auto space-y-4">
+      <div class="flex items-center justify-center space-x-3 text-slate-300">
+        <span class="font-bold text-white">Shahzaib Shams</span>
+        <span>•</span>
+        <span>Staff AI & Full-Stack Architect</span>
+        <span>•</span>
+        <a href="https://github.com/shahzaib-shams2023" target="_blank" class="text-emerald-400 hover:underline">github.com/shahzaib-shams2023</a>
+      </div>
+      <p class="max-w-xl mx-auto text-slate-400 text-[11px]">
+        Designed and built with modern web best practices, typed Python microservices, and decoupled cloud architectures. Published under the MIT License.
+      </p>
     </div>
   </footer>
 
   <script>
+    const projectDetails = {
+      agentpulse: {
+        title: "AgentPulse | Multi-Agent Directed Acyclic Graph",
+        subtitle: "Autonomous Hypothesis Decomposition & Fact-Checked Synthesis",
+        desc: "AgentPulse coordinates four distinct autonomous agents in an asynchronous DAG pipeline. The PlannerAgent formulates testable technical hypotheses; the ResearchAgent executes targeted retrieval against domain corpora; the CriticAgent calculates an empirical factuality confidence score; and the SynthesizerAgent compiles a cited Markdown briefing.",
+        diagram: `User Request
+    │
+    ▼
+[PlannerAgent] ─────► Hypotheses & Task Graph
+    │
+    ▼
+[ResearchAgent] ────► Empirical Corpora Extraction & Citations
+    │
+    ▼
+[CriticAgent] ──────► Contradiction Detection (Confidence: 96%)
+    │
+    ▼
+[SynthesizerAgent] ─► Cited Executive Briefing with Source IDs`,
+        tests: "8 passed (100% test coverage)",
+        deploy: "Docker / FastAPI / GitHub Pages",
+        github: "https://github.com/shahzaib-shams2023/agentpulse-multi-agent-researcher",
+        live: "https://shahzaib-shams2023.github.io/agentpulse-multi-agent-researcher/"
+      },
+      querycraft: {
+        title: "QueryCraft | Natural Language to SQL Analytics",
+        subtitle: "AST Token Guardrails & Read-Only Sandboxing",
+        desc: "QueryCraft enables business analysts to query relational databases in plain English. The platform reflects live schemas dynamically, enforces strict Abstract Syntax Tree (AST) guardrails forbidding table drops, updates, or deletes, executes read-only sandboxed queries, and auto-generates responsive Chart.js visualizations.",
+        diagram: `Plain English Inquiry ("Top customers by revenue")
+    │
+    ▼
+[Dynamic Schema Reflector] ──► Introspects Tables & Foreign Keys
+    │
+    ▼
+[LLM / Deterministic Generator] ─► Synthesizes SQL Query
+    │
+    ▼
+[AST Security Guardrail] ───► Evaluates Syntax Tree (Blocks DDL/DML)
+    │
+    ▼
+[Sandboxed Execution Engine] ► Returns Structured Result Rows & Chart.js`,
+        tests: "14 passed (100% test coverage)",
+        deploy: "Docker / SQLAlchemy / GitHub Pages",
+        github: "https://github.com/shahzaib-shams2023/querycraft-nl2sql-analytics",
+        live: "https://shahzaib-shams2023.github.io/querycraft-nl2sql-analytics/"
+      },
+      sentinel: {
+        title: "SentinelAI | Threat Intelligence & SIEM Log Analyzer",
+        subtitle: "Kill-Chain Correlation & MITRE ATT&CK Matrix Mapping",
+        desc: "SentinelAI normalizes raw Syslog, CEF, and web server logs. It correlates multi-stage attack chains across adversary stages, aligns events with MITRE ATT&CK tactics (e.g. T1110 Brute Force, T1548 Sudo Elevation), and produces deterministic SOC incident response playbooks with 1-click shell containment commands.",
+        diagram: `Syslog / CEF / Web Access Stream
+    │
+    ▼
+[Multi-Format Log Parser] ──► Normalizes Timestamps, IPs & Users
+    │
+    ▼
+[Multi-Stage Correlator] ───► Identifies Kill Chains (Auth Fail ➔ Root Escalation)
+    │
+    ▼
+[MITRE ATT&CK Engine] ──────► TTP Mapping (T1110, T1548, T1059)
+    │
+    ▼
+[Automated Playbook] ───────► Shell Containment Script (iptables / account lock)`,
+        tests: "10 passed (100% test coverage)",
+        deploy: "Docker / Python 3.11 / GitHub Pages",
+        github: "https://github.com/shahzaib-shams2023/sentinel-ai-security-log-analyzer",
+        live: "https://shahzaib-shams2023.github.io/sentinel-ai-security-log-analyzer/"
+      },
+      docuflow: {
+        title: "DocuFlow | Intelligent Document Processing",
+        subtitle: "Pydantic Schema Validation & Double-Entry Math Reconciliation",
+        desc: "DocuFlow automates invoice and receipt processing from messy OCR and PDF streams. It parses structured vendor and line item entities with strict Pydantic v2 validation, cross-multiplies quantity by unit price, calculates subtotal and tax reconciliations, and outputs SAP S/4HANA enterprise accounting payloads.",
+        diagram: `Raw Invoice OCR / Document Text
+    │
+    ▼
+[Text Normalizer] ──────────► Cleans Whitespace, Line Breaks & Unicode
+    │
+    ▼
+[Pydantic Schema Extractor] ─► Extracts Vendor, Line Items, Financials
+    │
+    ▼
+[Ledger Math Reconciler] ───► Verifies Qty*Price == Total; Subtotal+Tax == Stated
+    │
+    ▼
+[ERP Export Payload] ───────► Formats SAP S/4HANA & QuickBooks JSON`,
+        tests: "7 passed (100% test coverage)",
+        deploy: "Docker / Pydantic v2 / GitHub Pages",
+        github: "https://github.com/shahzaib-shams2023/docuflow-intelligent-document-pipeline",
+        live: "https://shahzaib-shams2023.github.io/docuflow-intelligent-document-pipeline/"
+      },
+      talentmatch: {
+        title: "TalentMatch AI | Resume Screening & Rubric Evaluator",
+        subtitle: "5-Pillar Rubric Scoring & Demographic Bias Mitigation",
+        desc: "TalentMatch AI screens software engineering candidates against role competencies using a 5-pillar rubric. It features a 1-click Blind Review Demographic Anonymizer to mitigate unconscious hiring bias, renders candidate strengths on a Chart.js Radar visualization, and generates tailored technical interview guides.",
+        diagram: `Candidate Resume / CV + Target Job Spec
+    │
+    ▼
+[Blind Demographic Anonymizer] ► Redacts Names, Pronouns & Grad Dates
+    │
+    ▼
+[5-Pillar Rubric Engine] ────► Scores Tech, Seniority, Design, Impact, Edu
+    │
+    ▼
+[Chart.js Radar Visualizer] ─► Generates Multiaxial Competency Overlay
+    │
+    ▼
+[Tailored Interview Guide] ──► Formulates Gap-Specific Competency Questions`,
+        tests: "7 passed (100% test coverage)",
+        deploy: "Docker / Chart.js / GitHub Pages",
+        github: "https://github.com/shahzaib-shams2023/talentmatch-ai-resume-screener",
+        live: "https://shahzaib-shams2023.github.io/talentmatch-ai-resume-screener/"
+      },
+      phishguard: {
+        title: "PhishGuard | Phishing Threat & URL Forensics",
+        subtitle: "RFC 822 Header Authentication & Punycode Homoglyph Engine",
+        desc: "PhishGuard inspects inbound emails for sophisticated social engineering attacks. It audits RFC 822 SPF, DKIM, and DMARC alignment, evaluates psychological urgency and credential harvesting heuristics, and scans embedded URLs for Punycode IDN homoglyphs and typosquatting.",
+        diagram: `Inbound Email Message (Headers + MIME Body)
+    │
+    ▼
+[RFC 822 Auth Inspector] ───► Verifies SPF, DKIM, DMARC & Return-Path
+    │
+    ▼
+[Psychological Heuristics] ─► Detects Urgency, Coercion & Panic Phrasing
+    │
+    ▼
+[Punycode URL Scanner] ─────► Identifies Homoglyphs (xn--), Typosquatting
+    │
+    ▼
+[Threat Forensics Report] ──► Overall Threat Score (0-100) & Warning Banner`,
+        tests: "12 passed (100% test coverage)",
+        deploy: "Docker / FastAPI / GitHub Pages",
+        github: "https://github.com/shahzaib-shams2023/phishguard-phishing-threat-detector",
+        live: "https://shahzaib-shams2023.github.io/phishguard-phishing-threat-detector/"
+      },
+      supportpulse: {
+        title: "SupportPulse | Support Automation & Ticket Routing",
+        subtitle: "Vector RAG Grounding & Tier-Based SLA State Machine",
+        desc: "SupportPulse triages inbound customer inquiries. It classifies intent and customer sentiment, performs semantic Vector RAG retrieval across verified internal knowledge articles, synthesizes policy-grounded replies with source citations, and manages a 15-minute P1 outage and churn SLA escalation state machine.",
+        diagram: `Customer Inquiry (Omnichannel)
+    │
+    ▼
+[Intent & Sentiment Engine] ─► Classifies Mood, Urgency & Category
+    │
+    ▼
+[Vector RAG Knowledge Base] ─► Retrieves High-Cosine-Similarity Articles
+    │
+    ▼
+[SLA State Machine] ────────► Calculates Target SLA (P1: 15m Guaranteed)
+    │
+    ▼
+[Cited Response Synthesizer] ► Authors Policy-Grounded Draft with KB Citations`,
+        tests: "10 passed (100% test coverage)",
+        deploy: "Docker / Vector RAG / GitHub Pages",
+        github: "https://github.com/shahzaib-shams2023/supportpulse-ai-customer-platform",
+        live: "https://shahzaib-shams2023.github.io/supportpulse-ai-customer-platform/"
+      },
+      datacleanse: {
+        title: "DataCleanse AI | Tabular Profiler & Cleaning Copilot",
+        subtitle: "IQR Anomaly Detection, PII Redaction & Pandas Code Synthesis",
+        desc: "DataCleanse AI audits raw tabular CSV and JSON datasets. It calculates statistical data hygiene scores (0-100), detects IQR outliers, unmasked government SSN/PII leaks, and datetime formatting drift, and automatically synthesizes executable Python Pandas ETL cleaning scripts.",
+        diagram: `Raw Tabular Dataset (CSV / JSON)
+    │
+    ▼
+[Statistical Profiler] ─────► Computes Health Rating & Distribution Stats
+    │
+    ▼
+[PII & Outlier Engine] ─────► Detects SSN Leaks, IQR Outliers, Date Drift
+    │
+    ▼
+[Cleaning Rule Optimizer] ──► Applies Imputations, Clips & Redactions
+    │
+    ▼
+[Pandas Script Generator] ──► Generates Production Python ETL Cleaning Code`,
+        tests: "9 passed (100% test coverage)",
+        deploy: "Docker / Pandas / GitHub Pages",
+        github: "https://github.com/shahzaib-shams2023/datacleanse-ai-data-profiling",
+        live: "https://shahzaib-shams2023.github.io/datacleanse-ai-data-profiling/"
+      }
+    };
+
     function filterCategory(cat) {
       document.querySelectorAll('.cat-btn').forEach(btn => {
         if (btn.getAttribute('data-cat') === cat) {
-          btn.className = 'cat-btn text-xs px-3.5 py-1.5 rounded-lg bg-emerald-600 text-white font-medium transition';
+          btn.className = "cat-btn text-xs px-3.5 py-1.5 rounded-xl bg-emerald-600 text-white font-medium transition shadow-sm";
         } else {
-          btn.className = 'cat-btn text-xs px-3.5 py-1.5 rounded-lg bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800 transition';
+          btn.className = "cat-btn text-xs px-3.5 py-1.5 rounded-xl text-slate-400 hover:text-white hover:bg-slate-800 transition font-medium";
         }
       });
 
-      document.querySelectorAll('.project-card').forEach(card => {
+      document.querySelectorAll('.glass-card').forEach(card => {
         if (cat === 'all' || card.getAttribute('data-category') === cat) {
           card.classList.remove('hidden');
         } else {
@@ -472,129 +875,29 @@
       });
     }
 
-    const DEMOS = {
-      agentpulse: {
-        title: "AgentPulse: Multi-Agent DAG Execution",
-        icon: "fa-brain",
-        repo: "https://github.com/shahzaib-shams2023/agentpulse-multi-agent-researcher",
-        content: `
-          <div class="p-3 bg-slate-950 rounded-lg border border-slate-800 font-mono text-[11px] space-y-2">
-            <div class="text-indigo-400 font-bold">> User Inquiry: 'Compare SQLite vs DuckDB for edge analytics'</div>
-            <div class="text-slate-400">Step 1: [PlannerAgent] Decomposed into 3 sub-tasks & performance hypotheses.</div>
-            <div class="text-emerald-400">Step 2: [ResearchAgent] Retrieved 5 verified benchmarks (KB-SQL-01).</div>
-            <div class="text-amber-400">Step 3: [CriticAgent] Contradiction check: 92% factuality confidence score.</div>
-            <div class="text-purple-400">Step 4: [SynthesizerAgent] Executive briefing compiled with [KB-SQL-01] citations.</div>
-          </div>
-        `
-      },
-      querycraft: {
-        title: "QueryCraft: AST Mutation Guardrail & NL-to-SQL",
-        icon: "fa-database",
-        repo: "https://github.com/shahzaib-shams2023/querycraft-nl2sql-analytics",
-        content: `
-          <div class="p-3 bg-slate-950 rounded-lg border border-slate-800 font-mono text-[11px] space-y-2">
-            <div class="text-emerald-400 font-bold">> Prompt: 'Show top 5 customers by revenue and plan tier'</div>
-            <div class="text-slate-300">Generated SQL: SELECT c.name, c.plan_tier, SUM(o.total_amount) AS total_spent FROM customers c JOIN orders o ON c.id = o.customer_id GROUP BY 1, 2 ORDER BY 3 DESC LIMIT 5</div>
-            <div class="text-emerald-300 bg-emerald-950/60 p-2 rounded border border-emerald-900">AST Security Guardrail: APPROVED (Read-Only SELECT statement). Mutation protection active.</div>
-          </div>
-        `
-      },
-      sentinel: {
-        title: "SentinelAI: MITRE ATT&CK Attack Correlation",
-        icon: "fa-shield-virus",
-        repo: "https://github.com/shahzaib-shams2023/sentinel-ai-security-log-analyzer",
-        content: `
-          <div class="p-3 bg-slate-950 rounded-lg border border-slate-800 font-mono text-[11px] space-y-2">
-            <div class="text-rose-400 font-bold">> Correlated Incident: INC-8491A (CRITICAL SEVERITY)</div>
-            <div class="text-slate-300">Stage 1: [T1110] 6 SSH authentication failures from 198.51.100.44</div>
-            <div class="text-slate-300">Stage 2: [T1078] Compromised login for 'deployer' from 198.51.100.44</div>
-            <div class="text-slate-300">Stage 3: [T1548] Sudo privilege escalation to /bin/bash</div>
-            <div class="text-emerald-400 bg-slate-900 p-2 rounded border border-slate-800">Playbook Generated: iptables -I INPUT 1 -s 198.51.100.44 -j DROP && passwd -l deployer</div>
-          </div>
-        `
-      },
-      docuflow: {
-        title: "DocuFlow: Arithmetic Ledger Verification",
-        icon: "fa-file-invoice-dollar",
-        repo: "https://github.com/shahzaib-shams2023/docuflow-intelligent-document-pipeline",
-        content: `
-          <div class="p-3 bg-slate-950 rounded-lg border border-slate-800 font-mono text-[11px] space-y-2">
-            <div class="text-blue-400 font-bold">> Document: INV-2024-8841 (NexSphere Cloud Inc.)</div>
-            <div class="text-slate-300">Line Items: 2x Dedicated Node ($1200) + 1x Replica ($650) + 1x Support ($450) = $3500.00</div>
-            <div class="text-slate-300">Subtotal: $3500.00 + Tax (8%): $280.00 = Total Due: $3780.00</div>
-            <div class="text-emerald-400 bg-emerald-950/60 p-2 rounded border border-emerald-900">Ledger Status: AUTO_APPROVED ($0.00 Discrepancy). Syncing to SAP Business One JSON.</div>
-          </div>
-        `
-      },
-      talentmatch: {
-        title: "TalentMatch AI: 5-Pillar Rubric Radar",
-        icon: "fa-user-check",
-        repo: "https://github.com/shahzaib-shams2023/talentmatch-ai-resume-screener",
-        content: `
-          <div class="p-3 bg-slate-950 rounded-lg border border-slate-800 font-mono text-[11px] space-y-2">
-            <div class="text-teal-400 font-bold">> Role: Staff AI & Systems Architect | Candidate: Alex Mercer</div>
-            <div class="text-slate-300">• Tech Stack Alignment: 88.5% | • Seniority & Depth: 100.0%</div>
-            <div class="text-slate-300">• Architectural Breadth: 92.0% | • Business Impact: 86.0%</div>
-            <div class="text-teal-300 bg-teal-950/60 p-2 rounded border border-teal-900">Overall Fit: 91.2% (STRONG_YES). Tailored interview guide generated.</div>
-          </div>
-        `
-      },
-      phishguard: {
-        title: "PhishGuard: Homoglyph & Header Forensics",
-        icon: "fa-fish-fins",
-        repo: "https://github.com/shahzaib-shams2023/phishguard-phishing-threat-detector",
-        content: `
-          <div class="p-3 bg-slate-950 rounded-lg border border-slate-800 font-mono text-[11px] space-y-2">
-            <div class="text-rose-400 font-bold">> Inbound Email: 'Your account will be suspended in 24 hours'</div>
-            <div class="text-rose-300">• SPF: FAIL | DKIM: FAIL | DMARC: FAIL (Return-Path spoofing confirmed)</div>
-            <div class="text-rose-300">• URL: paypa1-account-verify.top (Typosquatting & Suspicious .top TLD)</div>
-            <div class="text-rose-400 bg-rose-950/60 p-2 rounded border border-rose-900">Verdict: PHISHING_CONFIRMED (Risk: 92.5/100). Red warning banner generated.</div>
-          </div>
-        `
-      },
-      supportpulse: {
-        title: "SupportPulse: Vector RAG & 15m P1 SLA Routing",
-        icon: "fa-headset",
-        repo: "https://github.com/shahzaib-shams2023/supportpulse-ai-customer-platform",
-        content: `
-          <div class="p-3 bg-slate-950 rounded-lg border border-slate-800 font-mono text-[11px] space-y-2">
-            <div class="text-indigo-400 font-bold">> Ticket: 'Production API throwing 500 errors' (Enterprise Tier)</div>
-            <div class="text-slate-300">Classification: OUTAGE_INCIDENT | Urgency: P1_CRITICAL</div>
-            <div class="text-slate-300">RAG Context: Retrieved [KB-OUTAGE-03] Incident Escalation Guarantee</div>
-            <div class="text-rose-400 bg-rose-950/60 p-2 rounded border border-rose-900">Escalation Triggered: SRE War Room Alerted. Target SLA: 15 minutes.</div>
-          </div>
-        `
-      },
-      datacleanse: {
-        title: "DataCleanse AI: Tabular Anomaly & Pandas CodeGen",
-        icon: "fa-broom",
-        repo: "https://github.com/shahzaib-shams2023/datacleanse-ai-data-profiling",
-        content: `
-          <div class="p-3 bg-slate-950 rounded-lg border border-slate-800 font-mono text-[11px] space-y-2">
-            <div class="text-cyan-400 font-bold">> Tabular Health: 54.5/100 ➔ 96.0/100 (Post-Clean)</div>
-            <div class="text-slate-300">• Imputed missing revenue with median ($850.00)</div>
-            <div class="text-slate-300">• Clamped extreme outlier ($999,999.00) using 1.5x IQR</div>
-            <div class="text-slate-300">• Masked unmasked SSN identification column (***-**-XXXX)</div>
-            <div class="text-emerald-400 bg-slate-900 p-2 rounded border border-slate-800">Exported: Reusable Pandas transformation pipeline script.</div>
-          </div>
-        `
-      }
-    };
-
     function openDemo(key) {
-      const demo = DEMOS[key];
-      if (!demo) return;
-      document.getElementById('modalTitle').textContent = demo.title;
-      document.getElementById('modalIcon').className = `fa-solid ${demo.icon} text-emerald-400`;
-      document.getElementById('modalBody').innerHTML = demo.content;
-      document.getElementById('modalRepoLink').href = demo.repo;
+      const p = projectDetails[key];
+      if (!p) return;
+
+      document.getElementById('modalTitle').textContent = p.title;
+      document.getElementById('modalSubtitle').textContent = p.subtitle;
+      document.getElementById('modalDesc').textContent = p.desc;
+      document.getElementById('modalDiagram').textContent = p.diagram;
+      document.getElementById('modalTests').textContent = p.tests;
+      document.getElementById('modalDeploy').textContent = p.deploy;
+      document.getElementById('modalGithubLink').href = p.github;
+      document.getElementById('modalLiveLink').href = p.live;
+
       document.getElementById('demoModal').classList.remove('hidden');
     }
 
     function closeDemo() {
       document.getElementById('demoModal').classList.add('hidden');
     }
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeDemo();
+    });
   </script>
 </body>
 </html>
-
